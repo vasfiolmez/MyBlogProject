@@ -19,7 +19,7 @@ namespace MyBlogProject.DataAccessLayer.Repositories
 
         public void Delete(int id)
         {
-            var value = _context.Set<T>().Find();
+            var value = _context.Set<T>().Find(id);
             _context.Set<T>().Remove(value);
             _context.SaveChanges();
         }

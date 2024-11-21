@@ -1,4 +1,5 @@
-﻿ using MyBlogProject.DataAccessLayer.Abstract;
+﻿using Microsoft.EntityFrameworkCore;
+using MyBlogProject.DataAccessLayer.Abstract;
 using MyBlogProject.DataAccessLayer.Context;
 using MyBlogProject.DataAccessLayer.Repositories;
 using MyBlogProject.EntityLayer.Concrete;

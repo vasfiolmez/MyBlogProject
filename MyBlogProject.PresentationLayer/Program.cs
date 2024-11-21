@@ -15,7 +15,6 @@ builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<BlogCon
 
 builder.Services.AddControllersWithViews();
 
-
 builder.Services.AddScoped<IArticleDal, EfArticleDal>();
 builder.Services.AddScoped<IArticleService, ArticleManager>();
 

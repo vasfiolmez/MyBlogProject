@@ -1,0 +1,37 @@
+﻿@model List<Article>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+
+    <br />
+    <br />
+
+    <table class="table table-hover">
+        <tr>
+            <td>#</td>
+            <td>Başlık</td>
+            <td>Kategori</td>
+            <td>Sil</td>
+            <td>Güncelle</td>
+            <td>Yorumlar</td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ArticleId</td>
+                <td>@item.Title</td>
+                <td>@item.Category.CategoryName</td>
+
+                <td></td>
+                <td> <a href="/Article/DeleteArticle/@item.ArticleId" class="btn btn-danger">sil</a></td>
+                <td> <a href="/Article/UpdateArticle/@item.ArticleId" class="btn btn-success">güncelle</a></td>
+                <td> <a href="" class="btn btn-warning">yorumlar</a></td>
+
+            </tr>
+        }
+    </table>
+    <a href="/Article/CreateArticle/" class="btn btn-primary">Yeni Makale Girişi</a>
+</div>

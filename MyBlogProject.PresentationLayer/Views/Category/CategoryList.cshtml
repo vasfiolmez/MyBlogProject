@@ -1,4 +1,4 @@
-﻿@model List<MyBlogProject.EntityLayer.Concrete.Category>
+﻿@model List<Category>
 @{
     Layout = null;
 }
@@ -21,12 +21,12 @@
             <tr>
                 <td>@item.CategoryId</td>
                 <td>@item.CategoryName</td>
-                <td> <a href="" class="btn btn-danger">sil</a></td>
-                <td> <a href="" class="btn btn-success">güncelle</a></td>
+                <td> <a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">sil</a></td>
+                <td> <a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-success">güncelle</a></td>
                 <td> <a href="" class="btn btn-warning">bloglar</a></td>
                
             </tr>
         }
     </table>
-    <a href="" class="btn btn-primary">Yeni Kateori Grişi</a>
+    <a href="/Category/CreateCategory/" class="btn btn-primary">Yeni Kategori Girişi</a>
 </div>

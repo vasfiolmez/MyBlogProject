@@ -1,5 +1,4 @@
-﻿using AspNetCore;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MyBlogProject.BusinessLayer.Abstract;
 using MyBlogProject.EntityLayer.Concrete;
@@ -26,6 +25,7 @@ namespace MyBlogProject.PresentationLayer.Controllers
         public IActionResult CreateArticle()
         {
             var categoryList = _categoryService.TGetAll();
+
             List<SelectListItem> values1 = (from x in categoryList
                                             select new SelectListItem
                                             {
@@ -39,7 +39,7 @@ namespace MyBlogProject.PresentationLayer.Controllers
         public IActionResult CreateArticle(Article article)
         {
             article.CreatedDate = DateTime.Now;
-            _articleService.TInsert(article);        
+            _articleService.TInsert(article);
             return RedirectToAction("ArticleList");
         }
         public IActionResult DeleteArticle(int id)

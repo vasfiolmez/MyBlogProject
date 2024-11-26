@@ -10,5 +10,6 @@ namespace MyBlogProject.DataAccessLayer.Abstract
     public interface IArticleDal:IGenericDal<Article>
     {
        public List<Article> ArticleListWithCategory();
+        public List<Article> ArticleListWithCategoryAndAppUser();
     }
 }

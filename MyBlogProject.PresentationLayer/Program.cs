@@ -21,6 +21,9 @@ builder.Services.AddScoped<IArticleService, ArticleManager>();
 builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
+builder.Services.AddScoped<ISocialMediaDal,EfSocialMediaDal>();
+builder.Services.AddScoped<ISocialMediaService, SocialMediaManager>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

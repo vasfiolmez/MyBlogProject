@@ -44,7 +44,6 @@ namespace MyBlogProject.BusinessLayer.Concrete
                     //hata mesajı
             }
         }
-
         public void TUpdate(Category entity)
         {
             _categoryDal.Update(entity);

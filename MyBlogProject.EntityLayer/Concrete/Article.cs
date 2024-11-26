@@ -13,7 +13,12 @@ namespace MyBlogProject.EntityLayer.Concrete
         public DateTime CreatedDate { get; set; }
         public string CoverImageUrl { get; set; }
         public string MainImageUrl { get; set; }
+        public string Detail { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        public int AppUserId {  get; set; }
+        public AppUser AppUser { get; set; }
+
+        public int? ArticleViewCount { get; set; }
     }
 }
